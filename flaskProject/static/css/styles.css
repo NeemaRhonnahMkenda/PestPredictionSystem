@@ -1,0 +1,99 @@
+/* styles.css */
+
+body {
+    font-family: "Kohinoor Telugu", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 0;
+
+}
+
+form {
+    margin: 50px auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 8px;
+}
+
+input[type="submit"] {
+    background-color: #174f06;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3cb300;
+}
+
+.card {
+    background-color: #ffffff; /* White card background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    margin: 210px auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: darkgreen;
+}
+
+p {
+    color: #555555; /* Medium dark gray text color */
+    margin: 8px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #666666; /* Light gray text color for list items */
+}
+span{
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+.powered{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: darkgreen;
+    font-size: 12px;
+}

@@ -1,0 +1,41 @@
+<!-- Display pest information -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <title>Results</title>
+</head>
+<style>
+    body{
+        background-image: url("/static/images/pest.jpeg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+{% if pest_info %}
+    <div class="card">
+    <h2>Pest Information for {{ user_input_df['crop_type'].iloc[0] | title }}</h2>
+    <p>Pest Likelihood: {{ pest_likelihood }}%</p>
+    <p>Likelihood of Pest Infestation: {{ pest_infestation }}</p>
+    <p>Pests: {{ pest_info['pests'] }}</p>
+    <p>Mitigation techniques:</p>
+    <ul>
+        {% for stage, instructions in pest_info['mitigation'].items() %}
+            <li>{{ stage.capitalize() }}: {{ instructions }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="card">
+    <h2>Pest Information for {{ user_input_df['crop_type'].iloc[0] | title}}</h2>
+    <p>Pest Likelihood: {{ pest_likelihood }}%</p>
+    <p>Likelihood of Pest Infestation: {{ pest_infestation }}</p>
+{% endif %}
+    </div>
+</body>
+</html>

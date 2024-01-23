@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <title>Pest Predictor</title>
+</head>
+<style>
+    body {
+        background-image: url("/static/images/farm.jpeg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+{#    <h1>Pest Predictor</h1>#}
+<form action="/predict" method="post">
+    <h1>Pest Predictor</h1>
+    <!-- Crop Type -->
+    <label for="crop_type">Crop Type:</label>
+    <select name="crop_type" id="crop_type">
+        <option value="tomatoes">Tomatoes</option>
+        <option value="potatoes">Potatoes</option>
+        <option value="maize">Maize</option>
+        <option value="beans">Beans</option>
+        <option value="wheat">Wheat</option>
+    </select><br>
+
+    <!-- Temperature -->
+    <label for="temperature">Temperature:</label>
+    <input type="number" name="temperature" id="temperature" required><br>
+
+    <!-- Date -->
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date" required><br>
+
+    <!-- Rainfall -->
+    <label for="rainfall">Rainfall:</label>
+    <input type="number" name="rainfall" id="rainfall" required><br>
+
+    <!-- Humidity -->
+    <label for="humidity">Humidity:</label>
+    <input type="number" name="humidity" id="humidity" required><br>
+
+    <!-- Wind Speed -->
+    <label for="wind_speed">Wind Speed:</label>
+    <input type="number" name="wind_speed" id="wind_speed" required><br>
+
+    <!-- Soil Moisture -->
+    <label for="soil_moisture">Soil Moisture:</label>
+    <input type="number" name="soil_moisture" id="soil_moisture" required><br>
+
+    <input type="submit" value="Predict">
+    <p class="powered"><span>Powered By</span> MIRAGE MAVERICKS</p>
+</form>
+
+</body>
+</html>
